@@ -1,7 +1,6 @@
-﻿  CA.cpp
+﻿  Sort.cpp
   Создание кода
-  2 of 6 functions (33.3%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 14 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Создание кода завершено
   CA.vcxproj -> C:\Users\User\source\repos\CA\Release\CA.exe

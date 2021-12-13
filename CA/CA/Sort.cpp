@@ -38,7 +38,7 @@ int* Merge_Sort(int* arr, int* arr_copy, int left, int right){
     int* l_buff = Merge_Sort(arr, arr_copy, left, middle);
     int* r_buff = Merge_Sort(arr, arr_copy, middle + 1, right);
 
-    int* target = l_buff == arr ? arr_copy : arr;
+    int* arr_end = l_buff == arr ? arr_copy : arr;
 
     int l_cur = left, r_cur = middle + 1;
     for (int i = left; i <= right; ++i){
@@ -46,22 +46,22 @@ int* Merge_Sort(int* arr, int* arr_copy, int left, int right){
         if (l_cur <= middle && r_cur <= right){
 
             if (l_buff[l_cur] < r_buff[r_cur]){
-                target[i] = l_buff[l_cur];
+                arr_end[i] = l_buff[l_cur];
                 l_cur++;
             }
             else{
-                target[i] = r_buff[r_cur];
+                arr_end[i] = r_buff[r_cur];
                 r_cur++;
             }
         }
         else if (l_cur <= middle){
-            target[i] = l_buff[l_cur];
+            arr_end[i] = l_buff[l_cur];
             l_cur++;
         }
         else{
-            target[i] = r_buff[r_cur];
+            arr_end[i] = r_buff[r_cur];
             r_cur++;
         }
     }
-    return target;
+    return arr_end;
 }
